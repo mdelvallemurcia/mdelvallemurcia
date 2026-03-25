@@ -1,0 +1,30 @@
+name: Metrics
+on:
+  # Se ejecuta cada 12 horas
+  schedule: [{cron: "0 */12 * * *"}]
+  # Permite ejecutarlo manualmente desde la pestaña Actions
+  workflow_dispatch:
+  # Se ejecuta al hacer push en la rama principal
+  push: {branches: ["main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Aquí usamos el secreto que guardamos antes
+          token: ${{ secrets.METRICS_TOKEN }}
+          
+          # Configuración de lo que quieres mostrar
+          user: tu-usuario-aqui
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Madrid # Cambia a tu zona horaria
+          
+          # ESTO ES LO IMPORTANTE: Incluir proyectos privados
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_details: bytes-size, percentage
+          # Habilita la lectura de stats privados
+          plugin_languages_sections: most-used
