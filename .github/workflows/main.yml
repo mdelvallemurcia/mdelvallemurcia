@@ -1,11 +1,11 @@
 name: Metrics
 on:
-  # Se ejecuta cada 12 horas
   schedule: [{cron: "0 */12 * * *"}]
-  # Permite ejecutarlo manualmente desde la pestaña Actions
   workflow_dispatch:
-  # Se ejecuta al hacer push en la rama principal
   push: {branches: ["main"]}
+
+permissions:
+  contents: write
 
 jobs:
   github-metrics:
@@ -18,7 +18,7 @@ jobs:
           user: mdelvallemurcia
           template: classic
           base: header, activity, community, repositories, metadata
-          config_timezone: Europe/Madrid # Cambia a tu zona horaria
+          config_timezone: Europe/Madrid
                     
           plugin_languages: yes
           plugin_languages_ignored: html, css
