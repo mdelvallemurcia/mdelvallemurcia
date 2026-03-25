@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+
+![My stats](github-metrics.svg)
 <!--
  [![My GitHub stats](https://github-readme-stats.vercel.app/api?username=mdelvallemurcia)](https://github.com/anuraghazra/github-readme-stats)
 -->
