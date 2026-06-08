@@ -19,7 +19,6 @@ Most recent role as Senior Software Engineer, where I owned features end-to-end 
 ## 🚀 Currently focused on
 - 🤖  AI Engineering with .NET — building practical projects with Claude Code, Gentle-AI, SDD and MCP (Model Context Protocol)
 - 📚  Completing Harvard's CS50-AI
-- 🏛️  Microsoft official courses on MCP for Beginners and Microsoft Agent Frameworks
 - 🔧  Spec-Driven Development (SDD) methodology for AI-assisted coding
 
 
